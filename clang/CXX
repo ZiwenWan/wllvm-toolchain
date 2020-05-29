@@ -1,0 +1,6 @@
+#!/bin/bash
+PATH=/usr/local/cuda-8.0/bin:/usr/lib/llvm-4.0/bin:/apollo/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin: \
+LLVM_COMPILER=/apollo/clang/bin/clang \
+WLLVM_BC_STORE=/apollo/wllvm_bc \
+LLVM_BITCODE_GENERATION_FLAGS="-flto -fwhole-program-vtables" \
+exec wllvm++ "$@"
